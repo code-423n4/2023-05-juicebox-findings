@@ -1,0 +1,8 @@
+{
+  "contest": 237,
+  "handle": "Jigsaw",
+  "risk": "3",
+  "title": "Potential for trades to get sandwiched due to no slippage protection",
+  "issueId": 3,
+  "issueUrl": "https://github.com/code-423n4/2023-05-juicebox-findings/issues/3"
+}

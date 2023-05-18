@@ -1,0 +1,8 @@
+{
+  "contest": 237,
+  "handle": "pipoca",
+  "risk": "2",
+  "title": "Unvalidated Input in the didPay Function in the Smart Contract",
+  "issueId": 2,
+  "issueUrl": "https://github.com/code-423n4/2023-05-juicebox-findings/issues/2"
+}

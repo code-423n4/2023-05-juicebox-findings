@@ -1,0 +1,8 @@
+{
+  "contest": 237,
+  "handle": "sbh",
+  "risk": "2",
+  "title": "Potential Denial-of-Service (DoS) Vulnerability in uniswapV3SwapCallback() function",
+  "issueId": 34,
+  "issueUrl": "https://github.com/code-423n4/2023-05-juicebox-findings/issues/34"
+}

@@ -1,0 +1,8 @@
+{
+  "contest": 237,
+  "handle": "dicethedev",
+  "risk": "2",
+  "title": "use of the delegatecall function in the allocate function",
+  "issueId": 11,
+  "issueUrl": "https://github.com/code-423n4/2023-05-juicebox-findings/issues/11"
+}

@@ -1,0 +1,8 @@
+{
+  "contest": 237,
+  "handle": "Breeje",
+  "risk": "3",
+  "title": "On-chain slippage calculation can be manipulated and lead to MEV / sandwich attacks",
+  "issueId": 7,
+  "issueUrl": "https://github.com/code-423n4/2023-05-juicebox-findings/issues/7"
+}

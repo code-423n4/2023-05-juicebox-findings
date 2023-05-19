@@ -1,0 +1,8 @@
+{
+  "contest": 237,
+  "handle": "0xRobocop",
+  "risk": "2",
+  "title": "Buyback delegate may not accomplish its purpose during congested network",
+  "issueId": 19,
+  "issueUrl": "https://github.com/code-423n4/2023-05-juicebox-findings/issues/19"
+}

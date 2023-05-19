@@ -1,0 +1,3 @@
+1)Swap Slippage Control: The uniswapV3SwapCallback function checks if the received amount meets the minimum expected amount (_minimumAmountReceived) to control slippage. However, it's crucial to ensure that the minimum expected amount is set correctly and reflects the intended slippage tolerance. A small slippage value might result in a high number of failed swaps, while a large slippage value can lead to potential loss of funds.
+
+2)Access Control: The didPay function checks if the caller is the jbxTerminal contract to ensure authorized access. However, it is important to verify that the access control mechanism implemented in the jbxTerminal contract is secure and cannot be manipulated or bypassed by malicious actors.

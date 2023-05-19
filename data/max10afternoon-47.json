@@ -1,0 +1,8 @@
+{
+  "contest": 237,
+  "handle": "max10afternoon",
+  "risk": "2",
+  "title": "payParams function prevents users from specifying minReturnedTokens, when using the swap pathway",
+  "issueId": 47,
+  "issueUrl": "https://github.com/code-423n4/2023-05-juicebox-findings/issues/47"
+}

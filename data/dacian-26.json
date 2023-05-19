@@ -1,0 +1,8 @@
+{
+  "contest": 237,
+  "handle": "dacian",
+  "risk": "3",
+  "title": "anyone can front-run didPay() by calling payParams() to set mintedAmount & reservedRate, reducing output amount",
+  "issueId": 26,
+  "issueUrl": "https://github.com/code-423n4/2023-05-juicebox-findings/issues/26"
+}

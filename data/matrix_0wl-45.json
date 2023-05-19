@@ -1,0 +1,8 @@
+{
+  "contest": 237,
+  "handle": "matrix_0wl",
+  "risk": "2",
+  "title": "UNHANDLED RETURN VALUES OF TRANSFER AND TRANSFERFROM",
+  "issueId": 45,
+  "issueUrl": "https://github.com/code-423n4/2023-05-juicebox-findings/issues/45"
+}

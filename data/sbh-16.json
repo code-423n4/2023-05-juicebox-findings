@@ -1,0 +1,8 @@
+{
+  "contest": 237,
+  "handle": "sbh",
+  "risk": "2",
+  "title": "Lack of Input Validation Vulnerability to _data parameters",
+  "issueId": 16,
+  "issueUrl": "https://github.com/code-423n4/2023-05-juicebox-findings/issues/16"
+}

@@ -1,0 +1,3 @@
+1. Inherited from [ownable](https://github.com/code-423n4/2023-05-juicebox/blob/9d0458282511ff269b3b35b5b082b56d5cc08663/juice-buyback/contracts/JBXBuybackDelegate.sol#L39), but it's not used
+2. [supportsInterface](https://github.com/code-423n4/2023-05-juicebox/blob/9d0458282511ff269b3b35b5b082b56d5cc08663/juice-buyback/contracts/JBXBuybackDelegate.sol#L359) should call `super.supportsInterface()` so it also returns true if called with the `interfaceId` of `ERC165` itself.
+See: [OpenZeppelin](https://docs.openzeppelin.com/contracts/4.x/api/utils#ERC165)

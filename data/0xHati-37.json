@@ -1,0 +1,8 @@
+{
+  "contest": 237,
+  "handle": "0xHati",
+  "risk": "2",
+  "title": "uniswapV3SwapCallback doesn't check if the pool is deployed by the canonical UniswapV3Factory",
+  "issueId": 37,
+  "issueUrl": "https://github.com/code-423n4/2023-05-juicebox-findings/issues/37"
+}

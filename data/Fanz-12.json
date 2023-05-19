@@ -1,0 +1,8 @@
+{
+  "contest": 237,
+  "handle": "Fanz",
+  "risk": "3",
+  "title": "function payParams lack of access control",
+  "issueId": 12,
+  "issueUrl": "https://github.com/code-423n4/2023-05-juicebox-findings/issues/12"
+}

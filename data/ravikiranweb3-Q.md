@@ -1,0 +1,1 @@
+a) On minting the token, JBXBuybackDelegate_Mint() event is emitted with project id only. It would be more appropriate to emit the amount if not beneficiary incase offchain was tracking the minting amounts.

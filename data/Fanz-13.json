@@ -1,0 +1,8 @@
+{
+  "contest": 237,
+  "handle": "Fanz",
+  "risk": "3",
+  "title": "amount0Delta & amount1Delta could uniswapV3SwapCallback could be returns negative value",
+  "issueId": 13,
+  "issueUrl": "https://github.com/code-423n4/2023-05-juicebox-findings/issues/13"
+}

@@ -1,0 +1,8 @@
+{
+  "contest": 237,
+  "handle": "debo",
+  "risk": "3",
+  "title": "The return value of an external transfer call is not checked on the function uniswapV3SwapCallback in the contract JBXBuybackDelegate",
+  "issueId": 77,
+  "issueUrl": "https://github.com/code-423n4/2023-05-juicebox-findings/issues/77"
+}

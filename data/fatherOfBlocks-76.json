@@ -1,0 +1,8 @@
+{
+  "contest": 237,
+  "handle": "fatherOfBlocks",
+  "risk": "2",
+  "title": "possible DoS due to lack of validation in the constructor",
+  "issueId": 76,
+  "issueUrl": "https://github.com/code-423n4/2023-05-juicebox-findings/issues/76"
+}

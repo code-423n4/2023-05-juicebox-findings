@@ -1,0 +1,8 @@
+{
+  "contest": 237,
+  "handle": "ast3ros",
+  "risk": "2",
+  "title": "User can bypass the designed path by sending the wrong quote parameter",
+  "issueId": 67,
+  "issueUrl": "https://github.com/code-423n4/2023-05-juicebox-findings/issues/67"
+}

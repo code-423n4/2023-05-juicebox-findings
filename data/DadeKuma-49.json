@@ -1,0 +1,8 @@
+{
+  "contest": 237,
+  "handle": "DadeKuma",
+  "risk": "2",
+  "title": "Missing deadline check in swap results in users being sandwiched by MEV bots",
+  "issueId": 49,
+  "issueUrl": "https://github.com/code-423n4/2023-05-juicebox-findings/issues/49"
+}

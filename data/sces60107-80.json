@@ -1,0 +1,8 @@
+{
+  "contest": 237,
+  "handle": "sces60107",
+  "risk": "3",
+  "title": "Unsafe cast in `_swap()`",
+  "issueId": 80,
+  "issueUrl": "https://github.com/code-423n4/2023-05-juicebox-findings/issues/80"
+}

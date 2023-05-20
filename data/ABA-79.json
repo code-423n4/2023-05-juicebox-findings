@@ -1,0 +1,8 @@
+{
+  "contest": 237,
+  "handle": "ABA",
+  "risk": "2",
+  "title": "Funding cycles that use `JBXBuybackDelegate` as a redeem data source will slash all redeemable tokens",
+  "issueId": 79,
+  "issueUrl": "https://github.com/code-423n4/2023-05-juicebox-findings/issues/79"
+}

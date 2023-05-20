@@ -1,0 +1,8 @@
+{
+  "contest": 237,
+  "handle": "BenRai",
+  "risk": "2",
+  "title": "If the swap fails, the number of tokens that should have been swapped are minted and the supply of the token is deluded unnecessarily",
+  "issueId": 65,
+  "issueUrl": "https://github.com/code-423n4/2023-05-juicebox-findings/issues/65"
+}

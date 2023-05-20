@@ -1,0 +1,8 @@
+{
+  "contest": 237,
+  "handle": "nobody2018",
+  "risk": "2",
+  "title": "JBXBuybackDelegate.payParams should check that _data.beneficiary is equal to itself",
+  "issueId": 57,
+  "issueUrl": "https://github.com/code-423n4/2023-05-juicebox-findings/issues/57"
+}

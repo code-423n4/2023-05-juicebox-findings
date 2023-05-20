@@ -97,8 +97,88 @@ Let's make the protocol super-gas-efficient in the history of blockchain 💪
 
 <hr/>
 
+## [G-02] Optimized naming of methods to reduce gas
+We can optimize the method names using the information
 
-## [G-02] Gas efficient check for Provided project token to see if it is zero
+from the report provided by Lead watson IIIIII.
+
+You have the power to optimize your public/external function names
+
+and public member variable names, which can lead to significant gas savings.
+
+Take a look at this fascinating example on GitHub [Check here] (https://gist.github.com/IllIllI000/a5d8b486a8259f9f77891a919febd1a9) .
+
+By optimizing your contract interfaces and abstract contracts, 
+
+you can ensure that the most frequently-called functions
+
+consume the least amount of gas during method lookup. 
+
+Did you know that method IDs with two leading zero bytes
+
+can save an impressive 128 gas each during deployment?
+
+Additionally, by strategically renaming functions to achieve lower method IDs,
+
+you can save a remarkable 22 gas per call for each sorted position shifted.
+
+Embrace this opportunity for gas optimization
+
+Order functions based on their gas costs and frequency of use:
+
+Place the most frequently called functions with lower gas costs first.
+
+Consider the gas costs mentioned in the report to determine the order.
+
+Avoid leading zeroes in function names to reduce gas costs.
+
+We have the following instances that will be optimized with this approach:
+
+```solidity
+
+  function payParams(JBPayParamsData calldata _data)
+        external
+        override
+        returns (uint256 weight, string memory memo, JBPayDelegateAllocation[] memory delegateAllocations)
+...
+
+```
+
+```solidity
+
+   function didPay(JBDidPayData calldata _data) external payable override {
+ 
+
+```
+
+```solidity
+
+function uniswapV3SwapCallback(int256 amount0Delta, int256 amount1Delta, bytes calldata data) external override {
+    
+
+```
+
+```solidity
+ function redeemParams(JBRedeemParamsData calldata _data)
+        external
+        override
+        returns (uint256 reclaimAmount, string memory memo, JBRedemptionDelegateAllocation[] memory delegateAllocations)
+
+
+
+```
+
+```solidity
+
+    function supportsInterface(bytes4 _interfaceId) external pure override returns (bool) {
+
+
+
+```
+
+
+
+## [G-03] Gas efficient check for Provided project token to see if it is zero
 Instead of checking the _projectToken supplied argument if it is zero , we can have a plain comparison of the variable if it contains any value. 
 
 https://github.com/code-423n4/2023-05-juicebox/blob/main/juice-buyback/contracts/JBXBuybackDelegate.sol#L118-L127

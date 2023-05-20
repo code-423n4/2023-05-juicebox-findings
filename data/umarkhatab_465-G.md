@@ -16,7 +16,7 @@ that the protocol wants the user to feel in terms of gas efficiency.
 Let's go through each:
 
 
-### Plain-Gas-Efficient If conditions 
+### [G-01] Plain-Gas-Efficient If conditions 
  We can use plain if conditionals to check the Existence of some value in a variable than to compare 
  the zero value using Not operator which takes 3 gas units.
 #### Description
@@ -98,7 +98,7 @@ Let's make the protocol super-gas-efficient in the history of blockchain 💪
 <hr/>
 
 
-## Gas efficient check for Provided project token to see if it is zero
+## [G-02] Gas efficient check for Provided project token to see if it is zero
 Instead of checking the _projectToken supplied argument if it is zero , we can have a plain comparison of the variable if it contains any value. 
 
 https://github.com/code-423n4/2023-05-juicebox/blob/main/juice-buyback/contracts/JBXBuybackDelegate.sol#L118-L127

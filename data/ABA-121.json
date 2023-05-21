@@ -1,0 +1,8 @@
+{
+  "contest": 237,
+  "handle": "ABA",
+  "risk": "2",
+  "title": "Lack of access control on `JBXBuybackDelegate::payParams` allows `JBPayoutRedemptionPaymentTerminal3_1::pay` calls to be manipulated which could lead to infinite token minting via the controller",
+  "issueId": 121,
+  "issueUrl": "https://github.com/code-423n4/2023-05-juicebox-findings/issues/121"
+}

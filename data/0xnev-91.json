@@ -1,0 +1,8 @@
+{
+  "contest": 237,
+  "handle": "0xnev",
+  "risk": "3",
+  "title": "Contributors/Beneficiaries can front-run to change `reserveRate` and `mintedAmount` to gain huge amount of project",
+  "issueId": 91,
+  "issueUrl": "https://github.com/code-423n4/2023-05-juicebox-findings/issues/91"
+}

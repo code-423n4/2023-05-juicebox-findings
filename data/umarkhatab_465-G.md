@@ -178,10 +178,57 @@ function uniswapV3SwapCallback(int256 amount0Delta, int256 amount1Delta, bytes c
 
 and other public variables.
 
-[G-03] Failure to verify the zero address during contract initialization results in potential redeployment
+# [G-03] Failure to verify the zero address during contract initialization results in potential redeployment
 
 It has been observed that the contract examined in the audit lacks a verification step for zero addresses during deployment (calling the constructor). This omission leaves a window of opportunity for inadvertent deployment with a zero address, triggering the need for redeployment. Such redeployments consume additional gas and incur high deployment costs. It is crucial to address this vulnerability and ensure proper address validation during contract initialization to avoid unnecessary gas expenditure and potential deployment mishaps.
 
+## [G-04] Use latest solidity compiler version for the smart contract 
+Let's see what are the benefits of latest Solidity compiler versions until now
+
+Compared to the current version of the contract that is v0.8.16:
+
+### Solidity v0.8.17:
+
+Security fix for a vulnerability that could have been used to exploit contracts
+
+that used the callcode opcode.
+
+Support for the memoryview type.
+
+New compiler that is faster and more efficient than the previous compiler.
+
+### Solidity v0.8.18:
+Support for the sha3 and ripemd160 functions in the assembly keyword.
+
+Improved error messages for pragma statements.
+
+Fixed a bug that could have caused contracts to be incorrectly mined.
+
+### Solidity v0.8.19:
+Support for the function calldatasize() returns (uint256) function.
+
+Improved error messages for contracts that use the callcode opcode.
+
+Fixed a bug that could have caused contracts to be incorrectly mined.
+
+### Solidity v0.8.20:
+
+Support for the function calldatacopy(address dst, uint256 offset, uint256 length) function.
+
+Improved error messages for contracts that use the calldatasize function.
+
+Fixed a bug that could have caused contracts to be incorrectly mined.
+
+These are just a few of the benefits of using newer Solidity compiler versions.
+
+By using the latest version of Solidity, we can ensure that our smart contracts are 
+
+secure, feature-rich, performant, and compatible 
+
+with the latest versions of the Solidity compiler.
+
+This wraps up the report .
+
 Thank you for reading.
 
-I hope we will rock on it 😎
+Let's ROCK on Gas Optimizations  🎸😎

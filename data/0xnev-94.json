@@ -1,0 +1,8 @@
+{
+  "contest": 237,
+  "handle": "0xnev",
+  "risk": "2",
+  "title": "Uniswap pools may check quotes on low liquidity pairs as not all tokens are directly liquid",
+  "issueId": 94,
+  "issueUrl": "https://github.com/code-423n4/2023-05-juicebox-findings/issues/94"
+}

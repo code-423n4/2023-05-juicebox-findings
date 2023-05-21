@@ -227,6 +227,36 @@ secure, feature-rich, performant, and compatible
 
 with the latest versions of the Solidity compiler.
 
+## [G-05] Use `bytes` instead of `string` to optimize gas 
+There are many reasons on why we should use `bytes` instead of the strings.
+
+One of the reasons are bytes variables are packed into storage, while strings are not. 
+
+Packing means that the bytes are stored in a more efficient way, which can lead to lower gas costs.
+
+So, it is generally advised to use bytes instead of strings in smart contracts.
+
+This can help to optimize gas costs and improve the performance of your contract.
+
+
+Total instances : 2
+
+https://github.com/code-423n4/2023-05-juicebox/blob/main/juice-buyback/contracts/JBXBuybackDelegate.sol#L147
+
+```solidity
+
+        returns (uint256 weight, string memory memo, JBPayDelegateAllocation[] memory delegateAllocations)
+```
+
+https://github.com/code-423n4/2023-05-juicebox/blob/main/juice-buyback/contracts/JBXBuybackDelegate.sol#L238
+
+```solidity
+        returns (uint256 reclaimAmount, string memory memo, JBRedemptionDelegateAllocation[] memory delegateAllocations)
+```
+
+
+<hr/>
+
 This wraps up the report .
 
 Thank you for reading.

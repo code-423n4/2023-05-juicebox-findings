@@ -13,12 +13,13 @@ solidity version `0.8.19` because it has and open pragma; `pragma solidity ^0.8.
 | [G-05](#g05) | `""` is cheaper than `new bytes(0)` | 1 |
 | [G-06](#g06) | `sqrtPriceLimitX96` value can be `immutable` | 1 |
 | [G-07](#g07) | Use `assembly` on safe math operations | 1 |
-| [G-08](#g08) | Consider activate `via-ir` for deploying | 1 |
+| [G-08](#g08) | Use `msg.sender` instead of `pool` | 1 |
+| [G-09](#g09) | Consider activate `via-ir` for deploying | 1 |
 
 
 ---
 <h3 id="g01">
-  Remove `Ownable`, since its not used
+  G-01 Remove `Ownable`, since its not used
 </h3>
 
 Note, this will also reduce deploy size.
@@ -58,7 +59,7 @@ index 0ee751b..94068b6 100644
 
 ---
 <h3 id="g02">
-  `jbxTerminal.directory()` staticcall return can be set as `immutable`
+  G-02 `jbxTerminal.directory()` staticcall return can be set as `immutable`
 </h3>
 
 The `jbxTerminal` is immutable, and according to documentation `JBController3_0_1.directory()` is immutable, therefore, `jbxTerminal.directory()` can be setup in a immutable.
@@ -127,7 +128,7 @@ index 0ee751b..dab3ab3 100644
 
 ---
 <h3 id="g03">
-  `didPay(...)` Can be simplified
+  G-03 `didPay(...)` Can be simplified
 </h3>
 
 Consider the next refactor in the `diff` to reduce the `if` branch.
@@ -179,7 +180,7 @@ index 0ee751b..122be21 100644
 
 ---
 <h3 id="g04">
-  Ternary evaluation of `_amountReceived` and `_amountToSend` can be optimized
+  G-04 Ternary evaluation of `_amountReceived` and `_amountToSend` can be optimized
 </h3>
 
 
@@ -220,7 +221,7 @@ index 0ee751b..3648c77 100644
 
 ---
 <h3 id="g05">
-  Expression `""` is cheaper than `new bytes(0)`
+  G-05 Expression `""` is cheaper than `new bytes(0)`
 </h3>
 
 
@@ -255,13 +256,12 @@ index 0ee751b..cf7f54d 100644
 
 ---
 <h3 id="g06">
-  `sqrtPriceLimitX96` value can be `immutable` 
+  G-06 `sqrtPriceLimitX96` value can be `immutable` 
 </h3>
 
 Since `_projectTokenIsZero`and `TickMath.MAX_SQRT_RATIO` are values that never change, we can assume that the next expression will never change;
 `_projectTokenIsZero ? TickMath.MAX_SQRT_RATIO - 1 : TickMath.MIN_SQRT_RATIO + 1`
 
-**Recommendation:**
 
 ```
 test_swapIfQuoteBetter(uint256) (gas: -106 (-0.010%)) 
@@ -272,6 +272,7 @@ testDatasourceDelegateSwapIfPreferenceIsToClaimTokens() (gas: -106 (-0.040%))
 Overall gas change: -636 (-0.009%)
 ```
 
+**Recommendation:**
 
 <details>
   <summary>Diff</summary>
@@ -314,7 +315,7 @@ index 0ee751b..3c533a8 100644
 
 ---
 <h3 id="g07">
-  Use `assembly` on safe math operations
+  G-07 Use `assembly` on safe math operations
 </h3>
 
 Instead of 
@@ -352,6 +353,7 @@ testDatasourceDelegateSwapIfPreferenceIsToClaimTokens() (gas: -269 (-0.101%))
 Overall gas change: -2267 (-0.031%)
 ```
 
+**Recommendation:**
 
 <details>
   <summary>Diff</summary>
@@ -394,10 +396,49 @@ index 0ee751b..9509faf 100644
 
 </details>
 
+---
+<h3 id="g08">
+  G-08 Use `msg.sender` instead of `pool`
+</h3>
+
+We can infeer that `msg.sender` is `pool`, because of [this validadation](https://github.com/code-423n4/2023-05-juicebox/blob/9a36e5c8d0588f0f262a0cd1c08e34b2184d8f4d/juice-buyback/contracts/JBXBuybackDelegate.sol#L218)
+
+Same can be done with `jbxTerminal` in function `didPay` there is an access control that guarantee that `msg.sender` is `jbxTerminal`. I didnt suggest it because [G-02](#g02) tackle this issue.
+
+
+```
+test_swapIfQuoteBetter(uint256) (gas: -7 (-0.001%)) 
+test_swapRandomAmountIn(uint256) (gas: -7 (-0.001%)) 
+test_swapMultiple() (gas: -14 (-0.001%)) 
+Overall gas change: -28 (-0.000%)
+```
+
+**Recommendation:**
+
+<details>
+  <summary>Diff</summary>
+
+```diff
+diff --git a/juice-buyback/contracts/JBXBuybackDelegate.sol b/juice-buyback/contracts/JBXBuybackDelegate.sol
+index 0ee751b..3490ac3 100644
+--- a/juice-buyback/contracts/JBXBuybackDelegate.sol
++++ b/juice-buyback/contracts/JBXBuybackDelegate.sol
+@@ -229,7 +229,7 @@ contract JBXBuybackDelegate is IJBFundingCycleDataSource, IJBPayDelegate, IUnisw
+ 
+         // Wrap and transfer the weth to the pool
+         weth.deposit{value: _amountToSend}();
+-        weth.transfer(address(pool), _amountToSend);
++        weth.transfer(msg.sender, _amountToSend);
+     }
+ 
+     function redeemParams(JBRedeemParamsData calldata _data)
+```
+
+</details>
 
 ---
-<h3 id="g07">
-  Consider activate `via-ir` for deploying
+<h3 id="g09">
+  G-09 Consider activate `via-ir` for deploying
 </h3>
 
 The IR-based code generator was introduced with an aim to not only allow code generation to be more transparent and auditable but also to enable more powerful optimization passes that span across functions.

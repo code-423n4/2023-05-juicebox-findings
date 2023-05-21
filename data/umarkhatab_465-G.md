@@ -1,6 +1,6 @@
 # JuiceBox Gas Optimization Findings
 
-## Summary
+# Summary
 The protocol team has surpised the auditors with their commitment to the gas efficiency . 
 
 I appreciate their dedication towards user experience .
@@ -16,10 +16,10 @@ that the protocol wants the user to feel in terms of gas efficiency.
 Let's go through each:
 
 
-### [G-01] Plain-Gas-Efficient If conditions 
+## [G-01] Plain-Gas-Efficient If conditions 
  We can use plain if conditionals to check the Existence of some value in a variable than to compare 
- the zero value using Not operator which takes 3 gas units.
-#### Description
+ the zero value using NOT(!) operator which takes 3 gas units.
+### Description
  For example, instead of using    if (_nonReservedToken != 0) projectToken.transfer(_data.beneficiary, _nonReservedToken);
 
 ``` solidity
@@ -33,7 +33,7 @@ We can use something like :
 ```
 
 This will save 3 units of gas just for one condition.
-So if we have multiple conditions like this ,
+So if we have multiple conditions like this,
 which in our case are 2 located here
 
 https://github.com/code-423n4/2023-05-juicebox/blob/main/juice-buyback/contracts/JBXBuybackDelegate.sol#L286

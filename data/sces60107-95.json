@@ -1,0 +1,8 @@
+{
+  "contest": 237,
+  "handle": "sces60107",
+  "risk": "2",
+  "title": "Unexpected path could misuse the logic in `JBXBuybackDelegate.didPay()`",
+  "issueId": 95,
+  "issueUrl": "https://github.com/code-423n4/2023-05-juicebox-findings/issues/95"
+}

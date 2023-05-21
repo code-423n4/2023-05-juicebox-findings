@@ -178,6 +178,10 @@ function uniswapV3SwapCallback(int256 amount0Delta, int256 amount1Delta, bytes c
 
 and other public variables.
 
+[G-03] Failure to verify the zero address during contract initialization results in potential redeployment
+
+It has been observed that the contract examined in the audit lacks a verification step for zero addresses during deployment (calling the constructor). This omission leaves a window of opportunity for inadvertent deployment with a zero address, triggering the need for redeployment. Such redeployments consume additional gas and incur high deployment costs. It is crucial to address this vulnerability and ensure proper address validation during contract initialization to avoid unnecessary gas expenditure and potential deployment mishaps.
+
 Thank you for reading.
 
 I hope we will rock on it 😎

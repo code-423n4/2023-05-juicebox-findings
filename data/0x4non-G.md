@@ -13,6 +13,8 @@ solidity version `0.8.19` because it has and open pragma; `pragma solidity ^0.8.
 | [G-05](#g05) | `""` is cheaper than `new bytes(0)` | 1 |
 | [G-06](#g06) | `sqrtPriceLimitX96` value can be `immutable` | 1 |
 | [G-07](#g07) | Use `assembly` on safe math operations | 1 |
+| [G-08](#g08) | Consider activate `via-ir` for deploying | 1 |
+
 
 ---
 <h3 id="g01">
@@ -251,6 +253,7 @@ index 0ee751b..cf7f54d 100644
 
 </details>
 
+---
 <h3 id="g06">
   `sqrtPriceLimitX96` value can be `immutable` 
 </h3>
@@ -309,7 +312,7 @@ index 0ee751b..3c533a8 100644
 
 </details>
 
-
+---
 <h3 id="g07">
   Use `assembly` on safe math operations
 </h3>
@@ -326,7 +329,17 @@ value = _quote - value;
 ```
 
 
-```
+```test_mintIfSlippageTooHigh() (gas: -519 (-0.048%)) 
+test_mintIfPreferClaimedIsFalse() (gas: -515 (-0.052%)) 
+test_mintIfWeightGreatherThanPrice(uint256) (gas: -860 (-0.090%)) 
+test_swapIfQuoteBetter(uint256) (gas: -1065 (-0.096%)) 
+testDatasourceDelegateMintIfPreferenceIsNotToClaimTokens() (gas: -1545 (-0.814%)) 
+testDatasourceDelegateSwapIfPreferenceIsToClaimTokens() (gas: -2231 (-0.840%)) 
+testDatasourceDelegateWhenQuoteIsLowerThanTokenCount(uint256) (gas: -1994 (-1.046%)) 
+test_swapMultiple() (gas: -20268 (-1.488%)) 
+test_swapRandomAmountIn(uint256) (gas: -20337 (-1.876%)) 
+testRevertIfSlippageIsTooMuchWhenSwapping() (gas: 474 (3.856%)) 
+Overall gas change: -48860 (-0.673%)
 test_mintIfWeightGreatherThanPrice(uint256) (gas: -128 (-0.013%)) 
 test_swapIfQuoteBetter(uint256) (gas: -269 (-0.024%)) 
 test_swapRandomAmountIn(uint256) (gas: -269 (-0.025%)) 
@@ -380,3 +393,41 @@ index 0ee751b..9509faf 100644
 ```
 
 </details>
+
+
+---
+<h3 id="g07">
+  Consider activate `via-ir` for deploying
+</h3>
+
+The IR-based code generator was introduced with an aim to not only allow code generation to be more transparent and auditable but also to enable more powerful optimization passes that span across functions.
+
+You can enable it on the command line using `--via-ir` or with the option `{"viaIR": true}`.
+
+This will take longer to compile, but you can just simple test it before deploying and if you got a better benchmark then you can add `--via-ir` to your deploy command
+
+More on: https://docs.soliditylang.org/en/v0.8.17/ir-breaking-changes.html
+
+
+```
+test_mintIfSlippageTooHigh() (gas: -519 (-0.048%)) 
+test_mintIfPreferClaimedIsFalse() (gas: -515 (-0.052%)) 
+test_mintIfWeightGreatherThanPrice(uint256) (gas: -860 (-0.090%)) 
+test_swapIfQuoteBetter(uint256) (gas: -1065 (-0.096%)) 
+testDatasourceDelegateMintIfPreferenceIsNotToClaimTokens() (gas: -1545 (-0.814%)) 
+testDatasourceDelegateSwapIfPreferenceIsToClaimTokens() (gas: -2231 (-0.840%)) 
+testDatasourceDelegateWhenQuoteIsLowerThanTokenCount(uint256) (gas: -1994 (-1.046%)) 
+test_swapMultiple() (gas: -20268 (-1.488%)) 
+test_swapRandomAmountIn(uint256) (gas: -20337 (-1.876%)) 
+testRevertIfSlippageIsTooMuchWhenSwapping() (gas: 474 (3.856%)) 
+Overall gas change: -48860 (-0.673%)
+```
+
+**Usage**
+
+```bash
+# Take a snapshot
+forge snapshot --snap=baseSnap --via-ir
+# Use diff a against 
+forge snapshot --diff=baseSnap --via-ir
+```

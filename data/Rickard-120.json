@@ -1,0 +1,8 @@
+{
+  "contest": 237,
+  "handle": "Rickard",
+  "risk": "2",
+  "title": "`payParams()` do not account for tokens with decimals higher than 18",
+  "issueId": 120,
+  "issueUrl": "https://github.com/code-423n4/2023-05-juicebox-findings/issues/120"
+}

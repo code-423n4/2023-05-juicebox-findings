@@ -468,7 +468,7 @@ Overall gas change: -48860 (-0.673%)
 
 ```bash
 # Take a snapshot
-forge snapshot --snap=baseSnap --via-ir
+forge snapshot --snap=baseSnap
 # Use diff a against 
 forge snapshot --diff=baseSnap --via-ir
 ```

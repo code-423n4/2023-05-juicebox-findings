@@ -1,0 +1,8 @@
+{
+  "contest": 237,
+  "handle": "0xnev",
+  "risk": "3",
+  "title": "Project tokens that does not have 18 decimals can have issues when calling `payParams()`",
+  "issueId": 92,
+  "issueUrl": "https://github.com/code-423n4/2023-05-juicebox-findings/issues/92"
+}

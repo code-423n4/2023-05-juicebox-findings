@@ -1,0 +1,8 @@
+{
+  "contest": 237,
+  "handle": "chaieth",
+  "risk": "3",
+  "title": "Minting exposes beneficiaries to unlimited slippage while minting the token out, sending back the token in the terminal.",
+  "issueId": 88,
+  "issueUrl": "https://github.com/code-423n4/2023-05-juicebox-findings/issues/88"
+}

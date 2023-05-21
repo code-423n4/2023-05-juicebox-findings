@@ -255,6 +255,50 @@ https://github.com/code-423n4/2023-05-juicebox/blob/main/juice-buyback/contracts
 ```
 
 
+## [G-06] Add unchecked {} for subtractions where the operands cannot underflow because of a previous calculation
+### Code picture
+
+``` require(a <= b); x = b - a => require(a <= b); unchecked { x = b - a }```
+
+### Description
+
+In the following parts of the code, there is no point in checking for underflow and overflow 
+
+because the previous calculations have ensured that.
+
+```solidity
+
+   196       (,, uint256 _quote, uint256 _slippage) = abi.decode(_data.metadata, (bytes32, bytes32, uint256, uint256));
+-> 197        uint256 _minimumReceivedFromSwap = _quote - (_quote * _slippage / SLIPPAGE_DENOMINATOR);
+
+
+```
+we can save gas by writing 
+
+```solidity
+-> 197        uint256 _minimumReceivedFromSwap ;
+unchecked{
+_minimumReceivedFromSwap  = _quote - (_quote * _slippage / SLIPPAGE_DENOMINATOR);
+}
+
+```
+we can do the same for following scenarios :
+
+```solidity
+156 if (_tokenCount < _quote - (_quote * _slippage / SLIPPAGE_DENOMINATOR)
+...
+```
+```solidity
+283    uint256 _reservedToken = _amountReceived - _nonReservedToken;
+...
+```
+
+```solidity
+312   uint256 _nonReservedTokenInContract = _amountReceived - _reservedToken;
+...
+```
+
+
 <hr/>
 
 This wraps up the report .

@@ -1,0 +1,8 @@
+{
+  "contest": 237,
+  "handle": "chaieth",
+  "risk": "3",
+  "title": "Unsafe cast in swap and uniswapV3SwapCallback functions can lead to attack",
+  "issueId": 89,
+  "issueUrl": "https://github.com/code-423n4/2023-05-juicebox-findings/issues/89"
+}

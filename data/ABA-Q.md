@@ -162,9 +162,9 @@ https://github.com/code-423n4/2023-05-juicebox/blob/main/juice-buyback/contracts
 
 ##### Recommendation
 
-Use the decimals propriety of `JBTokenAmount` instead of a hardcoded *1e8*:
+Use the decimals propriety of `JBTokenAmount` instead of a hardcoded *1e18*:
 ```Solidity
-        uint256 _tokenCount = PRBMath.mulDiv(_data.amount.value, _data.weight, _data.amount.decimals);
+        uint256 _tokenCount = PRBMath.mulDiv(_data.amount.value, _data.weight, 10 ** _data.amount.decimals);
 ```
 
 #

@@ -1,0 +1,8 @@
+{
+  "contest": 237,
+  "handle": "SanketKogekar",
+  "risk": "3",
+  "title": "It is possible for any user to change the value of `mintedAmount` and `reservedRate` (storage variables) using `payParams()`",
+  "issueId": 99,
+  "issueUrl": "https://github.com/code-423n4/2023-05-juicebox-findings/issues/99"
+}

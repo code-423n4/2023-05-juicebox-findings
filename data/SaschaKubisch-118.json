@@ -1,0 +1,8 @@
+{
+  "contest": 237,
+  "handle": "SaschaKubisch",
+  "risk": "2",
+  "title": " Uniswap v3's incompatibility with fee-on-transfer or rebasing tokens may result in failed transactions due to insufficient tokens or unexpected contract balances.llowing code segment in JBXBuybackDelegate.sol: solidity",
+  "issueId": 118,
+  "issueUrl": "https://github.com/code-423n4/2023-05-juicebox-findings/issues/118"
+}

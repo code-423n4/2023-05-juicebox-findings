@@ -1,0 +1,8 @@
+{
+  "contest": 237,
+  "handle": "chaieth",
+  "risk": "2",
+  "title": "Loss of Beneficiary tokens as the mint function does not perform a zero address check",
+  "issueId": 87,
+  "issueUrl": "https://github.com/code-423n4/2023-05-juicebox-findings/issues/87"
+}

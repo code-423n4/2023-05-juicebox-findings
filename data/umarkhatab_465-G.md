@@ -298,6 +298,21 @@ we can do the same for following scenarios :
 ...
 ```
 
+## [G-07] Using bools for storage incurs overhead
+According to a finding by the Senior Watson IIIIII,
+```solidity
+// Booleans are more expensive than uint256 or any type that takes up a full
+    // word because each write operation emits an extra SLOAD to first read the
+    // slot's contents, replace the bits taken up by the boolean, and then write
+    // back. This is the compiler's defense against contract upgrades and
+    // pointer aliasing, and it cannot be disabled.
+    
+```
+Instances that are affected by this update is the following one:
+
+```solidity
+ bool private immutable _projectTokenIsZero;
+```
 
 <hr/>
 

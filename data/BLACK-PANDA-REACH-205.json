@@ -1,0 +1,8 @@
+{
+  "contest": 237,
+  "handle": "BLACK-PANDA-REACH",
+  "risk": "2",
+  "title": "Partial loss of user value as a result of lack of transaction deadline implementation",
+  "issueId": 205,
+  "issueUrl": "https://github.com/code-423n4/2023-05-juicebox-findings/issues/205"
+}

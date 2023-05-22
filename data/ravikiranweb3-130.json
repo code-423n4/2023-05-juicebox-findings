@@ -1,0 +1,8 @@
+{
+  "contest": 237,
+  "handle": "ravikiranweb3",
+  "risk": "2",
+  "title": "Usage of mintedAmount and reservedRate across two function is vulnerable",
+  "issueId": 130,
+  "issueUrl": "https://github.com/code-423n4/2023-05-juicebox-findings/issues/130"
+}

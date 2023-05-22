@@ -1,0 +1,8 @@
+{
+  "contest": 237,
+  "handle": "rbserver",
+  "risk": "2",
+  "title": "Partial fill when swapping can cause ETH amount that is difference between `_delegateAllocation.amount` and `_amountToSend` to be locked in `JBXBuybackDelegate` contract",
+  "issueId": 244,
+  "issueUrl": "https://github.com/code-423n4/2023-05-juicebox-findings/issues/244"
+}

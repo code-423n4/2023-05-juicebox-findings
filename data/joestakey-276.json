@@ -1,0 +1,8 @@
+{
+  "contest": 237,
+  "handle": "joestakey",
+  "risk": "2",
+  "title": "Potential frozen `projectTokens` due to discrepancy in `reservedRate`",
+  "issueId": 276,
+  "issueUrl": "https://github.com/code-423n4/2023-05-juicebox-findings/issues/276"
+}

@@ -11,3 +11,20 @@ OpenZeppelin [recommendation](https://github.com/OpenZeppelin/openzeppelin-contr
 Manual review
 ## Recommended mitigation steps
 Replace `_mint()` with `_safeMint()`.
+# [N-01] Use underscores for number literals
+## Lines of code
+[https://github.com/code-423n4/2023-05-juicebox/blob/main/juice-buyback/contracts/JBXBuybackDelegate.sol#L68](https://github.com/code-423n4/2023-05-juicebox/blob/main/juice-buyback/contracts/JBXBuybackDelegate.sol#L68)
+## Vulnerability details
+### Impact
+````solidity
+juice-buyback/contracts/JBXBuybackDelegate.sol
+
+68:   uint256 private constant SLIPPAGE_DENOMINATOR = 10000;
+````
+## Tools Used
+Manual review
+## Recommended mitigation steps
+````diff
+- 68:   uint256 private constant SLIPPAGE_DENOMINATOR = 10000;
++ 68:   uint256 private constant SLIPPAGE_DENOMINATOR = 10_000;
+````

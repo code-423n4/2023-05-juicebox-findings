@@ -1,0 +1,8 @@
+{
+  "contest": 237,
+  "handle": "minhquanym",
+  "risk": "3",
+  "title": "Low Liquidity in Uniswap V3 Pool Can Lead to ETH Lockup in `JBXBuybackDelegate` Contract",
+  "issueId": 162,
+  "issueUrl": "https://github.com/code-423n4/2023-05-juicebox-findings/issues/162"
+}

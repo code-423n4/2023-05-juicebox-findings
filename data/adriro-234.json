@@ -1,0 +1,8 @@
+{
+  "contest": 237,
+  "handle": "adriro",
+  "risk": "2",
+  "title": "Type casting can potentially change semantics of swap operation",
+  "issueId": 234,
+  "issueUrl": "https://github.com/code-423n4/2023-05-juicebox-findings/issues/234"
+}

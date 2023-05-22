@@ -1,0 +1,3 @@
+Line 312 of the `_swap` function in the contract `JBXBuybackDelegate` declares a new variable `uint256 _nonReservedTokenInContract = _amountReceived - _reservedToken;`, because there has been an operation before: `uint256 _reservedToken = _amountReceived - _nonReservedT oken; ` , the value of `_nonReservedTokenInContract` is always equal to `_nonReservedToken`, so there is no need for a new variable `_nonReservedTokenInContract`, just use the already declared `_nonReservedToken` variable, which can save some Gas consumption.
+
+https://github.com/code-423n4/2023-05-juicebox/blob/9d0458282511ff269b3b35b5b082b56d5cc08663/juice-buyback/contracts/JBXBuybackDelegate.sol#L312

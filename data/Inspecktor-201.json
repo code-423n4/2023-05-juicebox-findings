@@ -1,0 +1,8 @@
+{
+  "contest": 237,
+  "handle": "Inspecktor",
+  "risk": "3",
+  "title": " If, as a result of the calculation, _tokenCount = 0, then this may lead to incorrect execution of the _mint function(_data, _tokenCount).",
+  "issueId": 201,
+  "issueUrl": "https://github.com/code-423n4/2023-05-juicebox-findings/issues/201"
+}

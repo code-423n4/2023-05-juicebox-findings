@@ -1,0 +1,8 @@
+{
+  "contest": 237,
+  "handle": "d3e4",
+  "risk": "2",
+  "title": "`_tokenCount` is calculated assuming `_weightRatio == 10**18`",
+  "issueId": 270,
+  "issueUrl": "https://github.com/code-423n4/2023-05-juicebox-findings/issues/270"
+}

@@ -11,6 +11,12 @@ https://github.com/code-423n4/2023-05-juicebox/blob/main/juice-buyback/contracts
 -     * @notice Swap the terminal token to receive the project toke_beforeTransferTon
 +     * @notice Swap the terminal token to receive the project token_beforeTransferToken
 ```
+https://github.com/code-423n4/2023-05-juicebox/blob/main/juice-buyback/contracts/JBXBuybackDelegate.sol#L214
+
+```diff
+-     * @dev    Slippage controle is achieved here
++     * @dev    Slippage control is achieved here
+```
 ## Unused imports
 https://github.com/code-423n4/2023-05-juicebox/blob/main/juice-buyback/contracts/JBXBuybackDelegate.sol
 
@@ -18,6 +24,4 @@ https://github.com/code-423n4/2023-05-juicebox/blob/main/juice-buyback/contracts
 4: import "@jbx-protocol/juice-contracts-v3/contracts/interfaces/IJBController3_1.sol";
 
 8: import "@jbx-protocol/juice-contracts-v3/contracts/interfaces/IJBFundingCycleBallot.sol";
-```
-
 ```

@@ -1,0 +1,3 @@
+GA1 : Failure to check the zero address in the constructor causes the contract to be deployed again
+
+Zero address control is not performed in the constructor in the scope of the audit. Bypassing this check could cause the contract to be deployed by mistakenly entering a zero address. In this case, the contract will need to be redeployed. This means extra gas consumption as contract deployment costs are high.

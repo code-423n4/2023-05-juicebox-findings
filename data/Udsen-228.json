@@ -1,0 +1,8 @@
+{
+  "contest": 237,
+  "handle": "Udsen",
+  "risk": "2",
+  "title": "ETH CAN GET LOCKED IN THE CONTRACT DURING THE EXECUTION OF `_swap()` FUNCTION",
+  "issueId": 228,
+  "issueUrl": "https://github.com/code-423n4/2023-05-juicebox-findings/issues/228"
+}

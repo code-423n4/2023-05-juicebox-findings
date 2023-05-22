@@ -1,0 +1,8 @@
+{
+  "contest": 237,
+  "handle": "prapandey031",
+  "risk": "3",
+  "title": "DoS while calling pay() for the first time when the JBXBuybackDelegate.sol would not have any project's token",
+  "issueId": 280,
+  "issueUrl": "https://github.com/code-423n4/2023-05-juicebox-findings/issues/280"
+}

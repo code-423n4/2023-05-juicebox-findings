@@ -1,0 +1,8 @@
+{
+  "contest": 237,
+  "handle": "QiuhaoLi",
+  "risk": "2",
+  "title": "payParams should Check _data.amount.token is ETH",
+  "issueId": 176,
+  "issueUrl": "https://github.com/code-423n4/2023-05-juicebox-findings/issues/176"
+}

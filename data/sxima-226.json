@@ -1,0 +1,8 @@
+{
+  "contest": 237,
+  "handle": "sxima",
+  "risk": "2",
+  "title": "Return value of weth.transfer isn't checked",
+  "issueId": 226,
+  "issueUrl": "https://github.com/code-423n4/2023-05-juicebox-findings/issues/226"
+}

@@ -1,0 +1,8 @@
+{
+  "contest": 237,
+  "handle": "dwward3n",
+  "risk": "3",
+  "title": "No guard for `mintedAmount` or `reservedRate`",
+  "issueId": 285,
+  "issueUrl": "https://github.com/code-423n4/2023-05-juicebox-findings/issues/285"
+}

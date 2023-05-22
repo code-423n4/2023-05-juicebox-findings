@@ -1,0 +1,8 @@
+{
+  "contest": 237,
+  "handle": "codetilda",
+  "risk": "2",
+  "title": "[M-01] Access control in *payParams* function",
+  "issueId": 266,
+  "issueUrl": "https://github.com/code-423n4/2023-05-juicebox-findings/issues/266"
+}

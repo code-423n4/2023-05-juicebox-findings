@@ -1,0 +1,8 @@
+{
+  "contest": 237,
+  "handle": "QiuhaoLi",
+  "risk": "2",
+  "title": "controller.mintTokensOf should check return value",
+  "issueId": 177,
+  "issueUrl": "https://github.com/code-423n4/2023-05-juicebox-findings/issues/177"
+}

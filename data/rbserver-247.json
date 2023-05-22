@@ -1,0 +1,8 @@
+{
+  "contest": 237,
+  "handle": "rbserver",
+  "risk": "2",
+  "title": "Amount of project token minted to beneficiary by `JBXBuybackDelegate._mint` function is not checked against an expected minimum number of project tokens to be minted to such beneficiary",
+  "issueId": 247,
+  "issueUrl": "https://github.com/code-423n4/2023-05-juicebox-findings/issues/247"
+}

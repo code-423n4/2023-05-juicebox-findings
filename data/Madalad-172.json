@@ -1,0 +1,8 @@
+{
+  "contest": 237,
+  "handle": "Madalad",
+  "risk": "2",
+  "title": "Excess ether sent when calling `didPay` can be stolen",
+  "issueId": 172,
+  "issueUrl": "https://github.com/code-423n4/2023-05-juicebox-findings/issues/172"
+}

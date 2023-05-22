@@ -1,0 +1,8 @@
+{
+  "contest": 237,
+  "handle": "Inspecktor",
+  "risk": "3",
+  "title": "If the controller for _data.projectId is not defined, it can lead to incorrect execution of _swap() and theft of funds by the beneficiary.",
+  "issueId": 204,
+  "issueUrl": "https://github.com/code-423n4/2023-05-juicebox-findings/issues/204"
+}

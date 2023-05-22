@@ -1,0 +1,8 @@
+{
+  "contest": 237,
+  "handle": "ravikiranweb3",
+  "risk": "2",
+  "title": "payParams is an external function, but there is validation for input data.",
+  "issueId": 129,
+  "issueUrl": "https://github.com/code-423n4/2023-05-juicebox-findings/issues/129"
+}

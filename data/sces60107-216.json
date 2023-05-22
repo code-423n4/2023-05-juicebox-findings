@@ -1,0 +1,8 @@
+{
+  "contest": 237,
+  "handle": "sces60107",
+  "risk": "3",
+  "title": "`_amountToSend` could be less than `amountSpecified`. And the rest ETH is stuck in `JBXBuybackDelegate`",
+  "issueId": 216,
+  "issueUrl": "https://github.com/code-423n4/2023-05-juicebox-findings/issues/216"
+}

@@ -60,3 +60,34 @@ The new value of `_tokenCount` in the burn should be `_amountReceived` because t
 +    _preferClaimedTokens: true
 + });
 ```
+
+### `slippage` variable is not needed
+
+The `slippage`variable is used to determine `_minimumReceivedFromSwap` from the swap but this could be calculated offchain so the `quote` variable could directly be the minimum returns wanted from the swap.
+
+This would save gas in `payParams()` and `didPay()`.
+
+To make it more clear, quote should probably be renamed `_minimumReceivedFromSwap`.
+
+In `payParams()`:
+```diff
+- // Unpack the quote from the pool, given by the frontend
+- (,, uint256 _quote, uint256 _slippage) = abi.decode(_data.metadata, (bytes32, bytes32, uint256, uint256));
+
+- // If the amount swapped is bigger than the lowest received when minting, use the swap pathway
+- if (_tokenCount < _quote - (_quote * _slippage / SLIPPAGE_DENOMINATOR)) {
+
++ // Unpack the _minimumReceivedFromSwap from the pool, given by the frontend
++ (,, uint256 _minimumReceivedFromSwap) = abi.decode(_data.metadata, (bytes32, bytes32, uint256));
+
++ // If the amount swapped is bigger than the lowest received when minting, use the swap pathway
++ if (_tokenCount < _minimumReceivedFromSwap) {
+```
+
+In `didPay()`:
+```diff
+- (,, uint256 _quote, uint256 _slippage) = abi.decode(_data.metadata, (bytes32, bytes32, uint256, uint256));
+- uint256 _minimumReceivedFromSwap = _quote - (_quote * _slippage / SLIPPAGE_DENOMINATOR);
+
++ (,, uint256 _minimumReceivedFromSwap) = abi.decode(_data.metadata, (bytes32, bytes32, uint256));
+```

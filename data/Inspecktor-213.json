@@ -1,0 +1,8 @@
+{
+  "contest": 237,
+  "handle": "Inspecktor",
+  "risk": "3",
+  "title": "Failure to check reservedRate can lead to a decrease in assets",
+  "issueId": 213,
+  "issueUrl": "https://github.com/code-423n4/2023-05-juicebox-findings/issues/213"
+}

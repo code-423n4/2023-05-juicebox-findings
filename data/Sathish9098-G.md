@@ -1,28 +1,11 @@
 # GAS OPTIMIZATION
 
-##
-
-
-Apologies for the formatting. Here's the table in a Markdown format:
-
-yaml
-Copy code
-| Contract                                        | Deployment Cost | Deployment Size |        |        |        |
-|-------------------------------------------------|-----------------|-----------------|--------|--------|--------|
-| contracts/JBXBuybackDelegate.sol:JBXBuybackDelegate contract |                 |                 |        |        |        |
-|                                                 | 1260474         | 6573            |        |        |        |
-|                                                 |                 |                 |        |        |        |
-| Function Name                                   | min             | avg             | median | max    | # calls |
-|-------------------------------------------------|-----------------|-----------------|--------|--------|---------|
-| didPay                                          | 51675           | 161126          | 148266 | 242106 | 7  |     |
-| payParams                                       | 2075            | 8271            | 9981   | 12476  | 10  |    |
-| uniswapV3SwapCallback                           | 867             | 20125           | 28794  | 30714  | 6  |    
-
-
 
 ## [G-1] Save gas by checking against default jbxTerminal.directory()
 
 jbxTerminal.directory() is an external call and the result can be determined at deployment time (i.e., it doesn't depend on any variable or dynamic state), you can consider saving the result in an immutable variable. This can potentially save gas by avoiding redundant external calls during contract execution.
+
+At least this will save 2100 gas. 
 
 ```solidity
 FILE: 2023-05-juicebox/juice-buyback/contracts/JBXBuybackDelegate.sol
@@ -35,7 +18,7 @@ https://github.com/code-423n4/2023-05-juicebox/blob/9d0458282511ff269b3b35b5b082
 
 ##
 
-## [G-2] The mintedAmount and reservedRate values should be checked before avoid unwanted to state variable write  
+## [G-2] The mintedAmount and reservedRate values should be checked before assign values to avoid unwanted state variable write  
 
 - it’ll save 2100 gas to not set it to that value again
 
@@ -44,8 +27,6 @@ mintedAmount, reservedRate  values updated
 
 - if particular condition false then values remains to 1 . 
 
-- If we avoid same value assignments can save 4200 gas every function call
-
 ### For every function call possible to save 4200 gas  
 
 ```diff
@@ -53,11 +34,11 @@ FILE: 2023-05-juicebox/juice-buyback/contracts/JBXBuybackDelegate.sol
 
 188: uint256 _tokenCount = mintedAmount;
 + 192:        uint256 _reservedRate = reservedRate;
-+ if(mintedAmount!=1)
++ if(mintedAmount! =1)
 + {
 + 189:        mintedAmount = 1;
 + }
-+ if(reservedRate!=1)
++ if(reservedRate! =1)
 + {
 + 189:        reservedRate = 1;
 + }

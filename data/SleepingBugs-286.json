@@ -1,0 +1,8 @@
+{
+  "contest": 237,
+  "handle": "SleepingBugs",
+  "risk": "3",
+  "title": "Anyone can front-run`didPay` calling `payParams` to grief `swap`s and `mint`s",
+  "issueId": 286,
+  "issueUrl": "https://github.com/code-423n4/2023-05-juicebox-findings/issues/286"
+}

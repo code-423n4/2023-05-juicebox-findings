@@ -1,0 +1,8 @@
+{
+  "contest": 237,
+  "handle": "DadeKuma",
+  "risk": "3",
+  "title": "`JBXBuybackDelegate` swap pathway always reverts unless slippage is set to 100%",
+  "issueId": 154,
+  "issueUrl": "https://github.com/code-423n4/2023-05-juicebox-findings/issues/154"
+}

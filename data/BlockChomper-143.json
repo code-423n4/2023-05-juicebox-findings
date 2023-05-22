@@ -1,0 +1,8 @@
+{
+  "contest": 237,
+  "handle": "BlockChomper",
+  "risk": "2",
+  "title": "[H-01] Missing deadline checks allow pending transactions to be maliciously executed",
+  "issueId": 143,
+  "issueUrl": "https://github.com/code-423n4/2023-05-juicebox-findings/issues/143"
+}

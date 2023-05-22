@@ -1,0 +1,8 @@
+{
+  "contest": 237,
+  "handle": "Udsen",
+  "risk": "2",
+  "title": "MALICIOUS USER CAN USE LOCKED ETH OF THE CONTRACT TO MINT HIGHER NUMBER OF TOKENS OR SWAP AND RECIEVE MORE TOKENS THAN HE IS ELIGIBLE",
+  "issueId": 243,
+  "issueUrl": "https://github.com/code-423n4/2023-05-juicebox-findings/issues/243"
+}

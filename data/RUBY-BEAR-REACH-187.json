@@ -1,0 +1,8 @@
+{
+  "contest": 237,
+  "handle": "RUBY-BEAR-REACH",
+  "risk": "2",
+  "title": "_data.amount.value should be less than msg.value in \"_swap\" function",
+  "issueId": 187,
+  "issueUrl": "https://github.com/code-423n4/2023-05-juicebox-findings/issues/187"
+}

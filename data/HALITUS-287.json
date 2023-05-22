@@ -1,0 +1,8 @@
+{
+  "contest": 237,
+  "handle": "HALITUS",
+  "risk": "2",
+  "title": "Improper configuration in JBXBuybackDelegate can cause swaps to fail everytime",
+  "issueId": 287,
+  "issueUrl": "https://github.com/code-423n4/2023-05-juicebox-findings/issues/287"
+}

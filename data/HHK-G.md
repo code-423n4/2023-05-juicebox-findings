@@ -63,7 +63,7 @@ The new value of `_tokenCount` in the burn should be `_amountReceived` because t
 
 ### `slippage` variable is not needed
 
-The `slippage`variable is used to determine `_minimumReceivedFromSwap` from the swap but this could be calculated offchain so the `quote` variable could directly be the minimum returns wanted from the swap.
+The `slippage` variable is used to determine `_minimumReceivedFromSwap` from the swap but this could be calculated offchain so the `quote` variable could directly be the minimum returns wanted from the swap.
 
 This would save gas in `payParams()` and `didPay()`.
 

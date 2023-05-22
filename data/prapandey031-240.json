@@ -1,0 +1,8 @@
+{
+  "contest": 237,
+  "handle": "prapandey031",
+  "risk": "3",
+  "title": "Missing \"if (beneficiaryTokenCount < _minReturnedTokens) revert INADEQUATE_TOKEN_COUNT();\" check in the _mint() function of the JBXBuybackDelegate.sol + DoS for the pay() function in the JBPayoutRedemptionPaymentTerminal3_1.sol (or the JBETHPaymentTerminal3_1.sol)",
+  "issueId": 240,
+  "issueUrl": "https://github.com/code-423n4/2023-05-juicebox-findings/issues/240"
+}

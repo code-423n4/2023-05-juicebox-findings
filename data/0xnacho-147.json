@@ -1,0 +1,8 @@
+{
+  "contest": 237,
+  "handle": "0xnacho",
+  "risk": "2",
+  "title": "ETH payment terminal's `pay` call fails if swap used and the specified _minReturnedTokens > 0",
+  "issueId": 147,
+  "issueUrl": "https://github.com/code-423n4/2023-05-juicebox-findings/issues/147"
+}

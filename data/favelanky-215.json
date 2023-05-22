@@ -1,0 +1,8 @@
+{
+  "contest": 237,
+  "handle": "favelanky",
+  "risk": "2",
+  "title": "The `JBXBuybackDelegate.sol` doesn't respect the EIP165",
+  "issueId": 215,
+  "issueUrl": "https://github.com/code-423n4/2023-05-juicebox-findings/issues/215"
+}
